@@ -1,0 +1,72 @@
+<!-- ============ HERO ============ -->
+<section id="home" class="hero">
+  <div class="hero__bg">
+    <div class="hero__bg-sat"></div>
+    <div class="hero__bg-fade"></div>
+    <div class="hero__bg-glow"></div>
+    <div class="hero__grid-overlay grid-overlay"></div>
+  </div>
+
+  <div class="container hero__inner">
+    <div>
+      <span class="eyebrow reveal">
+        <i data-lucide="sparkles"></i>
+        Geospatial AI Sdn Bhd · An Uzma Group Company
+      </span>
+      <h1 class="reveal">AI-Powered <span class="gradient-text">Geospatial Intelligence</span> Platform</h1>
+      <p class="hero__lead reveal">
+        Transforming Earth Observation, Land Monitoring, and Spatial Analytics into
+        actionable intelligence for government, agriculture, and enterprise —
+        engineered in Malaysia, deployed across Southeast Asia.
+      </p>
+      <div class="hero__cta reveal">
+        <button type="button" data-jump="solutions" class="btn btn--primary">
+          Explore Solutions <i data-lucide="arrow-right"></i>
+        </button>
+        <button type="button" data-jump="demos" class="btn btn--secondary">
+          <i data-lucide="play-circle"></i> View Live Demo
+        </button>
+      </div>
+      <div id="hero-stats" class="hero-stats"></div>
+    </div>
+
+    <div>
+      <!-- Animated globe: rotating planet + orbiting satellites -->
+      <div class="globe" aria-hidden="true">
+        <div class="globe__glow"></div>
+        <div class="globe__sphere">
+          <svg id="globe-surface" class="globe__map spin-surface" viewBox="0 0 200 200" preserveAspectRatio="xMidYMid meet"></svg>
+          <div class="globe__shade"></div>
+        </div>
+
+        <svg class="globe__orbits" viewBox="0 0 420 420" preserveAspectRatio="xMidYMid meet">
+          <!-- outer satellite with solar panels -->
+          <g transform="rotate(-18 210 210)">
+            <ellipse class="orbit-path" cx="210" cy="210" rx="198" ry="62" />
+            <g class="sat">
+              <rect class="sat__panel" x="-13.5" y="-2.4" width="9" height="4.8" rx="1" />
+              <rect class="sat__panel" x="4.5" y="-2.4" width="9" height="4.8" rx="1" />
+              <rect class="sat__body" x="-3" y="-3" width="6" height="6" rx="1.4" />
+              <circle class="sat__dish" cx="0" cy="-5" r="1.5" />
+              <animate attributeName="opacity" values="1;1;0.18;1;1" keyTimes="0;0.27;0.5;0.73;1" dur="15s" repeatCount="indefinite" />
+              <animateMotion dur="15s" repeatCount="indefinite" rotate="auto"
+                             path="M 12,210 a 198,62 0 1,0 396,0 a 198,62 0 1,0 -396,0" />
+            </g>
+          </g>
+          <!-- inner satellite, faster, opposite tilt -->
+          <g transform="rotate(20 210 210)">
+            <ellipse class="orbit-path orbit-path--faint" cx="210" cy="210" rx="150" ry="46" />
+            <g class="sat sat--mini">
+              <circle class="sat__dot" cx="0" cy="0" r="2.8" />
+              <animate attributeName="opacity" values="1;1;0.15;1;1" keyTimes="0;0.27;0.5;0.73;1" dur="9.5s" repeatCount="indefinite" />
+              <animateMotion dur="9.5s" repeatCount="indefinite" rotate="auto"
+                             path="M 60,210 a 150,46 0 1,0 300,0 a 150,46 0 1,0 -300,0" />
+            </g>
+          </g>
+        </svg>
+      </div>
+    </div>
+  </div>
+
+  <div class="hero__fade"></div>
+</section>
